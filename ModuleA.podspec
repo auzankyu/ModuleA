@@ -7,16 +7,18 @@
 #
 
 Pod::Spec.new do |spec|
-  spec.name         = 'ModuleA'
-  spec.version      = '1.0.0'
-  spec.summary      = 'Summary of MyLocalPod.'
-  spec.homepage     = 'https://example.com/MyLocalPod'
-  spec.license      = { :type => 'MIT', :file => 'LICENSE' }
-  spec.author       = { 'Author Name' => 'auzan@example.com' }
-  spec.platform     = :ios, '11.0'
-  spec.source       = { :http => 'https://filebin.net/guiwngbunm30enxq/ModuleA-Framework-1.zip' }
-  spec.source_files = 'Sources/**/*'
-  spec.ios.vendored_frameworks = 'ModuleA.xcframework'
+
+  spec.name         = "ModuleA"
+  spec.version      = "1.0.0"
+  spec.summary      = "#{spec.name} framework."
+  spec.description  = "Description for #{spec.name} framework."
+  spec.homepage     = "https://github.com/auzankyu"
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
+  spec.author       = { "Auzan" => "" }
+  spec.platform     = :ios, "11.0"
+  spec.source       = { :path => '.' }
+  # spec.source       = { :git => "https://github.com/auzankyu/AppCore.git", :branch => "main" }
+  spec.source_files = "ModuleA/**/*.swift"
   spec.static_framework = true
   spec.dependency 'AppCore'
 end
